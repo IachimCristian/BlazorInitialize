@@ -2,20 +2,25 @@
 
 <h1>Counter</h1>
 
-<p>Current count: @count</p>
+<p>Current count: @userCounter.Counter</p>
 
 <button @onclick="StartIncrementing">Start Incrementing</button>
 
 @code {
-    private int count = 0;
+    private UserCounter userCounter = new UserCounter();
 
-    protected async Task StartIncrementing()
+    protected override void OnInitialized()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            count++;
-            StateHasChanged();
-            await Task.Delay(100);
-        }
+        userCounter.OnCounterChanged += StateHasChanged;
+    }
+
+    private async Task StartIncrementing()
+    {
+        await userCounter.StartIncrementingAsync();
+    }
+
+    public void Dispose()
+    {
+        userCounter.OnCounterChanged -= StateHasChanged;
     }
 }
