@@ -71,3 +71,4 @@ D:\Engenharia_de_Software\Assignment2\InfraSim\obj\Debug\netcoreapp9.0\refint\In
 D:\Engenharia_de_Software\Assignment2\InfraSim\obj\Debug\netcoreapp9.0\InfraSim.pdb
 D:\Engenharia_de_Software\Assignment2\InfraSim\obj\Debug\netcoreapp9.0\InfraSim.genruntimeconfig.cache
 D:\Engenharia_de_Software\Assignment2\InfraSim\obj\Debug\netcoreapp9.0\ref\InfraSim.dll
+D:\Engenharia_de_Software\Assignment2\InfraSim\obj\Debug\netcoreapp9.0\InfraSim.sourcelink.json

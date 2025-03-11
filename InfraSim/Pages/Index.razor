@@ -4,13 +4,18 @@
 
 <p>Current count: @count</p>
 
-<button @onclick="StartIncrementing">Increment</button>
+<button @onclick="StartIncrementing">Start Incrementing</button>
 
 @code {
     private int count = 0;
 
-    private void StartIncrementing()
+    protected async Task StartIncrementing()
     {
-        count++;
+        for (int i = 0; i < 10; i++)
+        {
+            count++;
+            StateHasChanged();
+            await Task.Delay(100);
+        }
     }
 }
