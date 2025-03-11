@@ -8,11 +8,11 @@ public class UserCounter
 
     public async Task StartIncrementingAsync()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 200000; i += 5000)
         {
-            Counter++;
+            Counter += 5000;
             OnCounterChanged?.Invoke();
-            await Task.Delay(100);
+            await Task.Delay(10);
         }
     }
 }
